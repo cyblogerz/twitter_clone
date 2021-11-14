@@ -39,6 +39,10 @@ class Home extends StatelessWidget {
                 leading: Icon(Icons.flash_on),
                 title: Text('Moments'),
               ),
+               const ListTile(
+                leading: Icon(Icons.view_agenda),
+                title: Text('Highlights'),
+              ),
 
 
           ],
