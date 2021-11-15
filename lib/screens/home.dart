@@ -12,7 +12,12 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Twitter"),
+        backgroundColor: Colors.white,
+        iconTheme: IconThemeData(color: Colors.blue),
+        title: const Text("Twitter",style: TextStyle(color: Colors.blue),),
+        actions: [
+          Icon(Icons.notifications)
+        ],
       ),
       drawer: Drawer(
         child: ListView(
@@ -49,6 +54,10 @@ class Home extends StatelessWidget {
 
           ],
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: (){},
+        child: Icon(Icons.drive_file_rename_outline),
       ),
       body: ListView.separated(
         itemBuilder: (context,index){
