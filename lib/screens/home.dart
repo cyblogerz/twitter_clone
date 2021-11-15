@@ -61,6 +61,7 @@ class Home extends StatelessWidget {
               
             ],
           ),
+          trailing: Icon(Icons.more_horiz,),
           subtitle: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
@@ -68,44 +69,47 @@ class Home extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(vertical:10.0),
                 child: Text("pple keep saying things about how f'ed up your life is",style: TextStyle(color: Colors.black),),
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: <Widget>[
-                
-                  Row(
-                    children: <Widget>[
-                      Icon(Icons.comment_outlined,color: Colors.grey,size: 18,),
-                      Padding(
-                        padding: const EdgeInsets.only(left:3.0),
-                        child: Text("34"),
-                      ),
-                    ],
-                  ),
-                  Row(
-                    children: <Widget>[
-                     Icon(Icons.repeat,color: Colors.grey,size: 18,),
-                      Padding(
-                        padding: const EdgeInsets.only(left:3.0),
-                        child: Text("34"),
-                      ),
-                    ],
-                  ),
-                  Row(
-                    children: <Widget>[
-                     Icon(Icons.favorite_outline_outlined,color: Colors.grey,size: 18,),
-                      Padding(
-                        padding: const EdgeInsets.only(left:3.0),
-                        child: Text("34"),
-                      ),
-                    ],
-                  ),
-                  Row(
-                    children: <Widget>[
-                      Icon(Icons.share,color: Colors.grey,size: 18,),
-                      
-                    ],
-                  ),
-                ],
+              Padding(
+                padding: const EdgeInsets.only(right:50.0,top: 5),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: <Widget>[
+                  
+                    Row(
+                      children: <Widget>[
+                        Icon(Icons.comment_outlined,color: Colors.grey,size: 18,),
+                        Padding(
+                          padding: const EdgeInsets.only(left:3.0),
+                          child: Text("34"),
+                        ),
+                      ],
+                    ),
+                    Row(
+                      children: <Widget>[
+                       Icon(Icons.repeat,color: Colors.grey,size: 18,),
+                        Padding(
+                          padding: const EdgeInsets.only(left:3.0),
+                          child: Text("34"),
+                        ),
+                      ],
+                    ),
+                    Row(
+                      children: <Widget>[
+                       Icon(Icons.favorite_outline_outlined,color: Colors.grey,size: 18,),
+                        Padding(
+                          padding: const EdgeInsets.only(left:3.0),
+                          child: Text("34"),
+                        ),
+                      ],
+                    ),
+                    Row(
+                      children: <Widget>[
+                        Icon(Icons.share,color: Colors.grey,size: 18,),
+                        
+                      ],
+                    ),
+                  ],
+                ),
               ),
             ],
           ),
