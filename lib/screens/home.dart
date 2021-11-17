@@ -128,6 +128,21 @@ class Home extends StatelessWidget {
        separatorBuilder: (context,index){
         return Divider();
       },itemCount: 10),
+      bottomNavigationBar: BottomAppBar(
+        color: Colors.white,
+        child: IconTheme(
+          data: IconThemeData(color: Colors.blue),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              IconButton(onPressed: (){}, icon: Icon(Icons.home)),
+              IconButton(onPressed: (){}, icon: Icon(Icons.search)),
+              IconButton(onPressed: (){}, icon: Icon(Icons.notifications_outlined)),
+              IconButton(onPressed: (){}, icon: Icon(Icons.mail_outline))
+            ],
+          ),
+        ),
+      ),
       
     );
   }
