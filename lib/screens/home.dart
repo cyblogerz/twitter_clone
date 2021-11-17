@@ -16,7 +16,7 @@ class Home extends StatelessWidget {
         iconTheme: IconThemeData(color: Colors.blue),
         title: const Text("Twitter",style: TextStyle(color: Colors.blue),),
         actions: [
-          Icon(Icons.notifications)
+          Icon(Icons.flash_on)
         ],
       ),
       drawer: Drawer(
