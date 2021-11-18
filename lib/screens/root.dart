@@ -6,7 +6,7 @@ import 'package:twitter_clone/screens/notifications.dart';
 import 'package:twitter_clone/screens/search.dart';
 
 List<Widget>_Pages = [Home(),Notifications(),Messages(),Search()];
-var _index =0;
+int _currentindex =0;
 
 class RootPage extends StatefulWidget {
   const RootPage({ Key? key }) : super(key: key);
@@ -76,9 +76,11 @@ class _RootPageState extends State<RootPage> {
         ),
         showSelectedLabels: false,
         // showUnselectedLabels: true,
+        currentIndex: _currentindex,
         unselectedLabelStyle: TextStyle(
           color: Colors.black26,
         ),
+        
         
         items: [
           BottomNavigationBarItem(icon: Icon(Icons.home),label: "Home"),
@@ -86,9 +88,15 @@ class _RootPageState extends State<RootPage> {
           BottomNavigationBarItem(icon: Icon(Icons.mail),label: "Messages"),
           BottomNavigationBarItem(icon: Icon(Icons.notifications,),label: "Notifications")
         ],
+
+        onTap: (newIndex){
+          setState(() {
+            _currentindex = newIndex;
+          });
+        },
         
       ),
-      body: _Pages[_index],
+      body: _Pages[_currentindex],
     );
   }
 }
