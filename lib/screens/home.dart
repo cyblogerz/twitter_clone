@@ -13,7 +13,20 @@ class Home extends StatelessWidget {
     return Scaffold(
   
       floatingActionButton: FloatingActionButton(
-        onPressed: (){},
+        onPressed: (){
+          showBottomSheet(context: context, 
+          builder: (ctx1){
+            return Container(
+              width: double.infinity,
+              height: 200,
+              decoration: BoxDecoration(
+                color: Colors.red,
+                borderRadius: BorderRadius.only(topLeft: Radius.circular(32),topRight: Radius.circular(32))
+              ),
+
+            );
+          });
+        },
         child: Icon(Icons.drive_file_rename_outline),
       ),
       body: ListView.separated(
