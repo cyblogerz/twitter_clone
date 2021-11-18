@@ -64,36 +64,29 @@ class _RootPageState extends State<RootPage> {
           ],
         ),
       ),
-      bottomNavigationBar: BottomAppBar(
-        color: Colors.white,
-        child: IconTheme(
-          data: IconThemeData(color: Colors.blue),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              IconButton(onPressed: (){
-                setState(() {
-                  _index =0;
-                });
-              }, icon: Icon(Icons.home)),
-              IconButton(onPressed: (){
-                setState(() {
-                  _index=1;
-                });
-              }, icon: Icon(Icons.search)),
-              IconButton(onPressed: (){
-                setState(() {
-                  _index=2;
-                });
-              }, icon: Icon(Icons.notifications_outlined)),
-              IconButton(onPressed: (){
-                setState(() {
-                  _index = 3;
-                });
-              }, icon: Icon(Icons.mail_outline))
-            ],
-          ),
+      bottomNavigationBar: BottomNavigationBar(
+        selectedIconTheme: IconThemeData(
+          color: Colors.blue,
+          size: 27,
+          
+  
         ),
+        unselectedIconTheme: IconThemeData(
+          color: Colors.black26
+        ),
+        showSelectedLabels: false,
+        // showUnselectedLabels: true,
+        unselectedLabelStyle: TextStyle(
+          color: Colors.black26,
+        ),
+        
+        items: [
+          BottomNavigationBarItem(icon: Icon(Icons.home),label: "Home"),
+          BottomNavigationBarItem(icon: Icon(Icons.search),label: "Search"),
+          BottomNavigationBarItem(icon: Icon(Icons.mail),label: "Messages"),
+          BottomNavigationBarItem(icon: Icon(Icons.notifications,),label: "Notifications")
+        ],
+        
       ),
       body: _Pages[_index],
     );
